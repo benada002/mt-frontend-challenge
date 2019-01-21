@@ -1,0 +1,16 @@
+$breakpoints: (
+  xs: 0px,
+  s: 575px,
+  m: 775px,
+  l: 990px,
+  xl: 1200px
+);
+@mixin breakpoint($break) {
+  @if $break == xs {
+    @content;
+  } @else {
+    @media (min-width: map-get($breakpoints, $break )) {
+      @content;
+    }
+  }
+}

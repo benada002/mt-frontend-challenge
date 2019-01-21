@@ -1,0 +1,54 @@
+body,
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: map-get($font, body), sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+header,
+nav,
+section {
+  display: block;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration-line: none;
+  color: map-get($colors, dark);
+}
+
+p,
+a,
+span {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}

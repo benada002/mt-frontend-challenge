@@ -1,0 +1,37 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.container-full {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+  & > * {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+}
+@each $key, $val in $breakpoints {
+  @include breakpoint($key) {
+    @for $i from 1 to 13 {
+      .col#{if( $key !=  xs, -#{$key}, '' )}#{if( $i > 1, -#{$i}, '' )} {
+        width: ($i * 100% / 12);
+        & .gutter {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

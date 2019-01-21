@@ -1,0 +1,131 @@
+.nav {
+  background-color: map-get($colors, dark);
+  min-height: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  .logo {
+    display: none;
+  }
+  .row {
+    justify-content: flex-end;
+  }
+  .collapse {
+    width: 40px;
+    height: 50px;
+    padding: 0;
+    padding: 12px 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    & > span {
+      display: block;
+      height: 5px;
+      border-radius: 3px;
+    }
+    .short {
+      background-color: map-get($colors, accent);
+      width: 70%;
+    }
+    .long {
+      background-color: map-get($colors, accent);
+      width: 100%;
+    }
+  }
+  nav {
+    background-color: map-get($colors, base);
+    border-top: 3px solid map-get($colors, accent);
+    display: none;
+    ul {
+      padding: 1em 0 1em 0;
+    }
+    li {
+      padding: 0.3em 0 0.3em 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    a {
+      font-family: map-get($font, base), sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      color: #fff;
+      padding-left: 0.3em;
+      letter-spacing: 0.1em;
+      &:active {
+        color: map-get($colors, accent);
+      }
+      &:hover {
+        color: map-get($colors, accent);
+      }
+    }
+  }
+  &.show {
+    flex-direction: column;
+    position: relative;
+    nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+    }
+    .collapse {
+      padding: 9.09px 0;
+      justify-content: center;
+      align-items: center;
+      & > span {
+        transform: rotate(45deg);
+        transform-origin: 42% center;
+      }
+      .short {
+        transform: rotate(45deg);
+        width: 100%;
+      }
+      .long {
+        transform: rotate(-45deg);
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include breakpoint(l) {
+  .nav {
+    padding: 7.5px 15px;
+    .logo {
+      display: inline-block;
+      color: #fff;
+      margin: auto auto;
+    }
+    .collapse {
+      display: none;
+    }
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: rgba(255, 255, 255, 0);
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 100%;
+      top: 0;
+      border-top: none;
+      ul {
+        display: inline-flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+      li {
+        padding: 0 0.5em;
+        border-bottom: none;
+      }
+      a {
+      }
+    }
+  }
+}

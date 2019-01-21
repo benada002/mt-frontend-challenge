@@ -30,6 +30,7 @@ export default class {
   }
 
   createModalContainer() {
+    // Create outer container with a blurry background
     const bulrDiv = this.modalElement.appendChild(document.createElement('div'));
     bulrDiv.style.position = 'fixed';
     bulrDiv.style.display = 'none';
@@ -40,6 +41,7 @@ export default class {
     bulrDiv.style.backgroundColor = 'rgba(0,0,0,0.6)';
     bulrDiv.id = 'modal-outer';
 
+    // Create content wrapper
     const contentWrapper = bulrDiv.appendChild(document.createElement('div'));
     contentWrapper.style.backgroundColor = '#fff';
     contentWrapper.style.position = 'absolute';
@@ -53,6 +55,7 @@ export default class {
     contentWrapper.style.padding = '10px';
     contentWrapper.id = 'modal-wrapper';
 
+    // Create content container
     const contentDiv = contentWrapper.appendChild(document.createElement('div'));
     contentDiv.style.backgroundColor = '#fff';
     contentDiv.style.position = 'relative';
@@ -64,6 +67,7 @@ export default class {
     contentDiv.style.overflow = 'auto';
     contentDiv.id = 'modal-inner';
 
+    // Create close icon container
     const closeIcon = contentWrapper.appendChild(document.createElement('div'));
     closeIcon.style.position = 'absolute';
     closeIcon.style.height = '30px';
@@ -75,6 +79,7 @@ export default class {
     closeIcon.style.cursor = 'pointer';
     closeIcon.id = 'modal-close';
 
+    // Create close icon using svg
     closeIcon.appendChild(
       document.createRange().createContextualFragment(
         `<svg id="modal-icon" height="30" width="30" style="pointer-events: none;">
@@ -85,6 +90,7 @@ export default class {
     );
 
     document.body.appendChild(this.modalElement);
+    
     this.modalElement = document.querySelector('#modal-outer');
 
     document.body.addEventListener('click', e => {
@@ -122,6 +128,8 @@ export default class {
 
   close() {
     this.modalElement.style.display = 'none';
+    
+    // Remove previous content
     this.modalElement
       .querySelector('#modal-inner')
       .removeChild(this.modalElement.querySelector('#modal-inner').firstElementChild);

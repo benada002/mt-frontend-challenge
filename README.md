@@ -3,7 +3,7 @@ Use:
 ```
 npm install
 ```
-and 
+and then
 ```
 npm run dev
 ```

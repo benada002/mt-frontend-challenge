@@ -1,9 +1,10 @@
 # mt-frontend-challenge
-Use:
+Clone the repository and run:
 ```
 npm install
-```
-and then
-```
+and
 npm run dev
 ```
+Or use the files in the dist folder.
+
+For checking the code, go to the src folder.

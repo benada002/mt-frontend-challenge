@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MT Project</title>
+  <link href="app.css" rel="stylesheet"></head>
+  <body>
+    <div
+      id="loading"
+      style=" 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
+    >
+      <div
+        style="
+        background-color: #3f51b5;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      animation: loading-animation 0.8s infinite ease-in-out;"
+      ></div>
+      <h1
+        style="
+      color: #303f9f;
+      margin-top: 1em;
+      text-align: center;"
+      >
+        Loading
+      </h1>
+    </div>
+    <header id="top-nav" class="nav mr-bt-l">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="logo col-l-3"> <h1>Challenge</h1> </a>
+          <div class="collapse" data-toggle-element="#top-nav">
+            <span class="short"></span> <span class="long"></span>
+          </div>
+          <nav class="col-12 col-l-9">
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="container mr-bt-l">
+      <div class="row"><h1 class="col12">Grid using Flex!</h1></div>
+      <div class="row">
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/92c952" alt=" " />
+        </article>
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/b0f7cc" alt=" " />
+        </article>
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/197d29" alt=" " />
+        </article>
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/56acb2" alt=" " />
+        </article>
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/8985dc" alt=" " />
+        </article>
+        <article class="col-12 col-s-6 col-m-4 col-l-3 col-xl-2">
+          <img src="https://via.placeholder.com/150/5e12c6" alt=" " />
+        </article>
+      </div>
+    </section>
+    <section class="container mr-bt-l">
+      <div class="row"><h1 class="col12">Openable Grid using CSS column!</h1></div>
+      <div id="blog" class="article-grid"></div>
+    </section>
+  <script type="text/javascript" src="app.bundle.js"></script></body>
+</html>

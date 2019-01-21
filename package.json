@@ -7,7 +7,7 @@
     "prod": "webpack --hide-module --env.mode=production --config webpack.config.js"
   },
   "author": "Benedict Adams",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

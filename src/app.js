@@ -5,8 +5,6 @@ import Coll from './assets/js/collapse';
 import Modal from './assets/js/modal';
 import Preview from './assets/js/preview';
 
-if (module.hot) module.hot.accept();
-
 async function getContent(url = '') {
   try {
     let res = await fetch(url);
